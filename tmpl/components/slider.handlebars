@@ -1,0 +1,46 @@
+<article id="{{id}}" class="{{class}} component controller slider" data-deep="{{deep}}" data-component="slider"
+{{#if alignment}}
+    data-view-alignment="{{alignment}}"
+{{else}}
+    data-view-alignment="horizontal"
+{{/if}}
+
+{{#if native}}
+    data-controller="t8y/slider/Native"
+{{else}}
+    data-controller="t8y/slider/Flip"
+    data-force-mouse-swipe="true"
+    data-slide-by-frame="true"
+    {{#if target}}
+        data-target="{{target}}"
+    {{/if}}
+    {{#if disableSwipe}}
+        data-disable-swipe
+    {{/if}}
+    {{#if preventHardwareAcceleration}}
+        data-prevent-hardware-acceleration="{{preventHardwareAcceleration}}"
+    {{/if}}
+{{/if}}
+>
+    <div class="wrapper">
+        {{{content}}}
+    </div>
+
+    {{#if native}}
+        {{#each buttons}}
+            {{#component "slider/sensitivearea" class=class target=../id direction=direction}}{{/component}}
+        {{/each}}
+    {{else}}
+        {{#each buttons}}
+            {{#component "slider/button" class=class target=../id direction=direction}}{{/component}}
+        {{/each}}
+
+        {{#if pagination}}
+            {{> "components/slider/pagination" ../id}}
+        {{/if}}
+
+        {{#if counter}}
+            {{> "components/slider/counter" ../id}}
+        {{/if}}
+    {{/if}}
+</article>

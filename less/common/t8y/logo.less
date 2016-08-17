@@ -1,0 +1,37 @@
+.t8y-logo() {
+  position: relative;
+  vertical-align: middle;
+  > div {
+    //    z-index: -1;
+  }
+  &:after {
+    content: url(/_release/assets/img/t8y/logo_small.png);
+
+    position: absolute;
+    top: 0px;
+    right: 3.5em;
+    width: 7em;
+    z-index: 1;
+    font-size: 1em;
+    margin-top: 1em;
+    text-align: center;
+    line-height: 7em;
+  }
+
+  &:before {
+    font-family: 'icomoon';
+    content: "\e605";
+    font-size: 7em;
+    width: 1em;
+    height: 1em;
+    z-index: 1;
+    text-align: center;
+    line-height: normal;
+    color: @t8y-white;
+
+    position: absolute;
+    top: 0;
+    right: 0.5em;
+    text-shadow: 2px 2px 0 fadeout(white, 50%), 3px 3px 0 #707070;
+  }
+}

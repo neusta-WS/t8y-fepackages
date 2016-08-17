@@ -1,0 +1,64 @@
+{{#common "page"}}
+    <div class="container">
+        <div class="row">
+        {{#component "slider" class="col-xs-8" id="demo-native-0" native=true buttons=page.slider.sensitiveareas}}
+            {{#each page.slider.views}}
+                {{#component "slider/view"}}
+                    hello world!!!
+                {{/component}}
+            {{/each}}
+        {{/component}}
+
+            {{#component "slider" class="col-xs-8" id="demo-native-1" native=true alignment="vertical" buttons=page.slider.sensitiveareas}}
+                {{#each page.slider.views}}
+                    {{#component "slider/view"}}
+                        hello world!!!
+                    {{/component}}
+                {{/each}}
+            {{/component}}
+
+        {{#component "slider" class="col-xs-8" id="demo-0" counter=true buttons=page.slider.buttons alignment="vertical"}}
+            {{#each page.slider.views}}
+                {{#component "slider/view"}}
+                    <span></span>
+                {{/component}}
+            {{/each}}
+        {{/component}}
+
+        {{#component "slider" class="col-xs-8 col-xs-offset-4" id="demo-1" counter=true buttons=page.slider.buttons}}
+            {{#each page.slider.views}}
+                {{#component "slider/view"}}
+                    <span></span>
+                {{/component}}
+            {{/each}}
+        {{/component}}
+
+        {{#component "slider" class="col-xs-8 col-xs-offset-2" id="demo-2" pagination=true buttons=page.slider.buttons}}
+            {{#each page.slider.views}}
+                {{#component "slider/view"}}
+                    <span></span>
+                {{/component}}
+            {{/each}}
+        {{/component}}
+
+        {{#component "slider" class="col-xs-8 col-xs-offset-2" id="demo-2-sub" target="#demo-2" buttons=page.slider.buttons}}
+            {{#each page.slider.views}}
+                {{#component "slider/view"}}
+                    <a href="#" data-controller="t8y/slider/controls/Button" data-show-view="{{@index}}" data-target="#demo-2-sub"></a>
+                {{/component}}
+            {{/each}}
+        {{/component}}
+
+
+        {{#component "slider" class="col-xs-8 col-xs-offset-2" id="demo-3-sub" target="#demo-1" buttons=page.slider.buttons}}
+            {{#each page.slider.views}}
+                {{#component "slider/view"}}
+                    <a href="#" data-controller="t8y/slider/controls/Button" data-show-view="{{@index}}" data-target="#demo-3-sub"></a>
+                {{/component}}
+            {{/each}}
+        {{/component}}
+
+        <a href="#" class="controller" data-controller="t8y/slider/controls/Button" data-direction="+1" data-target="#demo-0"> hello  test </a>
+        </div>
+    </div>
+{{/common}}

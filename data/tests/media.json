@@ -1,0 +1,162 @@
+{
+    "page": {
+        "basePath": "../../",
+        "title": "t8y.com utils test page",
+        "head": {
+            "description": "Ich bin eine Page Description",
+            "keywords": "Wir, sind, Keywords",
+            "socialmedia": {
+                "title": "Ich bin ein SocialMedia Title",
+                "description": "Ich bin eine SocialMedia Description",
+                "image": {
+                    "src": "YOURWEBSITE.com/YOURIMAGE.png",
+                    "width": 200,
+                    "height": 200
+                }
+            },
+            "link": {
+                "style": "tests/media.css"
+            }
+        },
+        "video": {
+            "controls": [
+                {
+                    "type": "t8y/components/media/video/button",
+                    "controller": "Play",
+                    "hash": "play",
+                    "title": "Play",
+                    "attributes": [
+                        {
+                            "name": "timecode",
+                            "value": 12.0
+                        }
+                    ]
+                }, {
+                    "type": "t8y/components/media/video/button",
+                    "controller": "Skip",
+                    "hash": "skip",
+                    "title": "Skip"
+                }, {
+                    "type": "t8y/components/media/video/timeline",
+                    "breaks": [
+                        {
+                            "type": "t8y/components/media/video/button",
+                            "controller": "PauseAt",
+                            "hash": "pauseAt",
+                            "class": "test",
+                            "attributes": [
+                                {
+                                    "name": "timecode",
+                                    "value": 3.0
+                                }, {
+                                    "name": "target-class",
+                                    "value": "pause-one"
+                                }
+                            ]
+                        }, {
+                            "type": "t8y/components/media/video/button",
+                            "controller": "PauseAt",
+                            "hash": "pauseAt",
+                            "class": "test",
+                            "attributes": [
+                                {
+                                    "name": "timecode",
+                                    "value": 6.0
+                                }, {
+                                    "name": "target-class",
+                                    "value": "pause-two"
+                                }
+                            ]
+                        }, {
+                            "type": "t8y/components/media/video/button",
+                            "controller": "PauseAt",
+                            "hash": "pauseAt",
+                            "class": "test",
+                            "attributes": [
+                                {
+                                    "name": "timecode",
+                                    "value": 9.0
+                                }, {
+                                    "name": "target-class",
+                                    "value": "pause-three"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "poster": [
+                {
+                    "type": "lg",
+                    "scale": "true",
+                    "srcset": "../assets/videos/test-desktop.jpg, ../assets/videos/test-desktop.jpg 2x"
+                }, {
+                    "type": "sm",
+                    "scale": "true",
+                    "srcset": "../assets/videos/test-tablet.jpg, ../assets/videos/test-tablet.jpg 2x"
+                }, {
+                    "type": "default",
+                    "scale": "true",
+                    "srcset": "../assets/videos/test-phone.jpg, ../assets/videos/test-phone.jpg 2x"
+                }
+            ],
+            "sources": [
+                {
+                    "type": "mp4",
+                    "url": "../assets/videos/test-phone.mp4",
+                    "max-width": 767,
+                    "retina": false
+                },     {
+                    "type": "webm",
+                    "url": "../assets/videos/test-phone.webm",
+                    "max-width": 767,
+                    "retina": false
+                }, {
+                    "type": "mp4",
+                    "url": "../assets/videos/test-phone-retina.mp4",
+                    "max-width": 767,
+                    "retina": true
+                },     {
+                    "type": "webm",
+                    "url": "../assets/videos/test-phone-retina.webm",
+                    "max-width": 767,
+                    "retina": true
+                }, {
+                    "type": "mp4",
+                    "url": "../assets/videos/test-tablet.mp4",
+                    "max-width": 1024
+                }, {
+                    "type": "webm",
+                    "url": "../assets/videos/test-tablet.webm",
+                    "max-width": 1024
+                }, {
+                    "type": "mp4",
+                    "url": "../assets/videos/test-desktop.mp4"
+                },     {
+                    "type": "webm",
+                    "url": "../assets/videos/test-desktop.webm"
+                }
+            ]
+        },
+        "audio": {
+            "sources": [
+                {
+                    "type": "ogg",
+                    "url": "../assets/audio/test.ogv"
+                }, {
+                    "type": "mp3",
+                    "url": "../assets/audio/test.mp3"
+                }
+            ]
+        },
+        "script": {
+            "require": {
+                "config": {
+                    "t8y/media/Video": {
+                        "pluginPath": "ext_sources/"
+                    }
+                }
+            }
+        }
+    }
+}

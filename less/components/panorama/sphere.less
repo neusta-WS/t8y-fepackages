@@ -1,0 +1,50 @@
+article {
+  .perspective(950);
+
+  #vr-position {
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: translateZ(950px);
+  }
+
+  #rotor-x, #rotor-y {
+    .transform-style(preserve-3d);
+  }
+
+  #rotor-y {
+    .transform(rotate3d(0,1,0,10deg));
+  }
+
+  #rotateX, #rotateY {
+    position: relative;
+    width: 100%;
+    .transform-style(preserve-3d);
+  }
+
+  #cube {
+    position: relative;
+    top: -475px;
+    .transform-style(preserve-3d);
+
+    .transform(translate3d(475px, 0, 0px));
+
+
+    //    .rotate3d(1,0,0, 45deg);
+    img {
+      position: absolute;
+
+    }
+
+    img.front {
+      .transform(translate3d(0, 0, -475px));
+      //      .translateZ(-950px);
+    }
+
+    img.left {
+      .transform(translate3d(-475px, 0, 0) rotate3d(0, 1, 0, 90deg));
+    }
+
+    img.right {
+      .transform(translate3d(475px, 0, 0) rotate3d(0, 1, 0, -90deg));
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import '../style.less';
+@import "../components/media/video.less";
+
+@import '../components/picture.less';
+
+
+.picture_base-layout();
+
+.component[data-component="t8y/media/video"] {
+  .video_base-layout();
+}
+
+.component[data-component="t8y/media/video/poster"] {
+  .video_poster_base-layout();
+}
+
+.component[data-component="t8y/media/video/showat"] {
+  .video_showat_base-layout();
+}
+
+.component[data-component="t8y/media/video/timeline"] {
+  .video_timeline_base-layout();
+
+  .component[data-component="t8y/media/video/button"] {
+    margin-left: -25px;
+    width: 50px;
+    height: 50px;
+    background: greenyellow;
+    border-radius: 50%;
+
+  }
+}

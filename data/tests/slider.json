@@ -1,0 +1,65 @@
+{
+    "page": {
+        "basePath": "../../",
+        "title": "t8y.com slider test page",
+        "head": {
+            "description": "Ich bin eine Page Description",
+            "keywords": "Wir, sind, Keywords",
+            "socialmedia": {
+                "title": "Ich bin ein SocialMedia Title",
+                "description": "Ich bin eine SocialMedia Description",
+                "image": {
+                    "src": "YOURWEBSITE.com/YOURIMAGE.png",
+                    "width": 200,
+                    "height": 200
+                }
+            },
+            "link": {
+                "style": "tests/slider.css"
+            }
+        },
+
+        "slider": {
+            "views": [
+                {
+                    "title": "hello"
+                }, {
+                    "title": "hello"
+                }, {
+                    "title": "hello"
+                }, {
+                    "title": "hello"
+                }, {
+                    "title": "hello"
+                }, {
+                    "title": "hello"
+                }
+            ],
+            "buttons": [
+                {
+                    "class": "prev",
+                    "direction": "-1"
+                }, {
+                    "class": "next",
+                    "direction": "+1"
+                }
+            ],
+            "sensitiveareas": [
+                {
+                    "class": "prev",
+                    "direction": "-5"
+                }, {
+                    "class": "next",
+                    "direction": "+5"
+                }
+            ]
+        },
+        "script": {
+            "require": {
+                "config": {
+
+                }
+            }
+        }
+    }
+}

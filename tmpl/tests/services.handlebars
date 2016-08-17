@@ -1,0 +1,13 @@
+{{#common "page"}}
+    {{> "components/services/upload" page.body.upload}}
+
+    <a href="" class="controller" data-controller="t8y/api/facebook/Access">FACEBOOK CONNECT</a>
+
+    <div class="controller" data-controller="t8y/api/facebook/gui/Albums" data-target=".access-button">
+        ALBUMS
+        <a href="" class="access-button controller" data-controller="t8y/api/facebook/Access">ACCESS</a>
+    </div>
+
+    <!--<div class="google-maps controller" data-controller="t8y/api/google/gui/Maps"></div>-->
+
+{{/common}}

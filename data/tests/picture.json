@@ -1,0 +1,77 @@
+{
+    "page": {
+        "basePath": "../../",
+        "title": "t8y.com utils test page",
+        "head": {
+            "description": "Ich bin eine Page Description",
+            "keywords": "Wir, sind, Keywords",
+            "socialmedia": {
+                "title": "Ich bin ein SocialMedia Title",
+                "description": "Ich bin eine SocialMedia Description",
+                "image": {
+                    "src": "YOURWEBSITE.com/YOURIMAGE.png",
+                    "width": 200,
+                    "height": 200
+                }
+            },
+            "link": {
+                "style": "tests/picture.css"
+            }
+        },
+        "content": {
+            "picture": [
+                {
+                    "type": "lg",
+                    "src": "http://simpleicon.com/wp-content/uploads/screen-1.png"
+                }, {
+                    "type": "md",
+                    "alignment": "left",
+                    "src": "http://simpleicon.com/wp-content/uploads/ipad-landscape.png"
+                }, {
+                    "type": "sm",
+                    "alignment": "right",
+                    "scale": "true",
+                    "src": "http://simpleicon.com/wp-content/uploads/ipad-portrait.png"
+                }, {
+                    "type": "xs",
+                    "alignment": "left",
+                    "src": "http://simpleicon.com/wp-content/uploads/iphone-landscape.png"
+                }, {
+                    "type": "default",
+                    "alignment": "right",
+                    "src": "http://simpleicon.com/wp-content/uploads/iphone-portrait.png"
+                }
+            ],
+            "pictureSrcSet": [
+                {
+                    "type": "lg",
+                    "src": "http://simpleicon.com/wp-content/uploads/screen-1.png"
+                }, {
+                    "type": "md",
+                    "alignment": "left",
+                    "srcset": "http://img.notebooksbilliger.de/images/products/100000/108202/Apple_iPad_4_21.jpg, http://cdn.gottabemobile.com/wp-content/uploads/2012/03/ipad-review-3-new-10.jpg 2x"
+                }, {
+                    "type": "sm",
+                    "alignment": "right",
+                    "scale": "true",
+                    "srcset": "http://img.notebooksbilliger.de/images/products/100000/108202/Apple_iPad_4_21.jpg, http://cdn.gottabemobile.com/wp-content/uploads/2012/03/ipad-review-3-new-10.jpg 2x"
+                }, {
+                    "type": "xs",
+                    "alignment": "left",
+                    "src": "http://simpleicon.com/wp-content/uploads/iphone-landscape.png"
+                }, {
+                    "type": "default",
+                    "alignment": "right",
+                    "src": "http://simpleicon.com/wp-content/uploads/iphone-portrait.png"
+                }
+            ]
+        },
+        "script": {
+            "require": {
+                "config": {
+
+                }
+            }
+        }
+    }
+}

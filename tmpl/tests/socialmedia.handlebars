@@ -1,0 +1,10 @@
+{{#common "page"}}
+    {{#each page.socialmedia.sharer}}
+        {{> "components/socialmedia/sharer"}}
+    {{/each}}
+
+    {{> "components/socialmedia/plugin" page.socialmedia.pluginAll}}
+    {{> "components/socialmedia/plugin" page.socialmedia.pluginFacebook}}
+    {{> "components/socialmedia/plugin" page.socialmedia.pluginTwitter}}
+    {{> "components/socialmedia/plugin" page.socialmedia.pluginGoogle}}
+{{/common}}

@@ -1,0 +1,11 @@
+<a href="#{{hash}}"
+    class="component controller {{class}}"
+    data-component="t8y/media/video/button"
+    {{#if controller}}
+        data-controller="t8y/media/video/{{controller}}"
+    {{/if}}
+    data-target="#{{id}}"
+    {{#each attributes}}
+        data-{{name}}="{{value}}"
+    {{/each}}
+>{{{title}}}</a>

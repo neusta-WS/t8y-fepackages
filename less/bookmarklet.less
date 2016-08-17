@@ -1,0 +1,47 @@
+@import '../_resources/bower/lesshat/build/lesshat.less';
+@import "components/layer/panel.less";
+
+
+.bookmarklet-panel {
+  .layer-panel_base-layout();
+  background-color: lightgray;
+
+  ul {
+    margin: 0;
+    padding-left: 20px;
+
+    li {
+      list-style-type: none;
+
+      &.menu {
+        > a:before {
+          content: '\e615';
+          font-family: icomoon;
+          font-size: 12px;
+          color: white;
+          padding-right: 10px;
+        }
+
+        &.active {
+          > a:before {
+            content: '\e614';
+          }
+        }
+      }
+
+      a {
+        display: block;
+        padding: 10px 0px;
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+
+  a + ul {
+    display: none;
+  }
+
+  .active > ul {
+    display: block;
+  }
+}

@@ -1,0 +1,39 @@
+@import "video/button.less";
+@import "video/poster.less";
+@import "video/showat.less";
+@import "video/timeline.less";
+
+.video_base-layout() {
+  position: relative;
+  width: 100%;
+
+  .video {
+    position: relative;
+    width: 100%;
+    padding-top: percentage(9/16);
+    height: 100%;
+    width: 100%;
+
+    video, .me-plugin  {
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .me-plugin > *{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (max-width: @screen-xs-max) {
+    .poster {
+      pointer-events: none;
+    }
+
+    video.normal::-webkit-media-controls {
+      display:none !important;
+    }
+  }
+}

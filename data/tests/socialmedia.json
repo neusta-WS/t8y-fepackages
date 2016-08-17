@@ -1,0 +1,115 @@
+{
+    "page": {
+        "basePath": "../../",
+        "title": "t8y.com slider test page",
+        "head": {
+            "description": "Ich bin eine Page Description",
+            "keywords": "Wir, sind, Keywords",
+            "socialmedia": {
+                "title": "Ich bin ein SocialMedia Title",
+                "description": "Ich bin eine SocialMedia Description",
+                "image": {
+                    "src": "YOURWEBSITE.com/YOURIMAGE.png",
+                    "width": 200,
+                    "height": 200
+                }
+            },
+            "link": {
+                "style": "tests/socialmedia.css"
+            }
+        },
+
+        "socialmedia": {
+            "sharer": [
+                {
+                    "type": "Facebook",
+                    "class": "icon-facebook",
+                    "url": "http://www.spiegel.de"
+                }, {
+                    "type": "Google",
+                    "class": "icon-google-plus",
+                    "url": "http://www.spiegel.de"
+                }, {
+                    "type": "Odnoklassniki",
+                    "class": "icon-twitter",
+                    "url": "http://www.spiegel.de",
+                    "text": "твой комментарий"
+                }, {
+                    "type": "Twitter",
+                    "class": "icon-twitter",
+                    "url": "http://www.spiegel.de",
+                    "text": "Ich bin ein Twitter Text!"
+                }, {
+                    "type": "Mail",
+                    "class": "icon-mail",
+                    "url": "http://www.spiegel.de",
+                    "subject": "Ich bin ein Mail Betreff!",
+                    "text": "Ich bin ein Mail Text!"
+                }
+            ],
+            "pluginAll": {
+                "switch": {
+                    "name": "all"
+                },
+                "services": [
+                    {
+                        "type": "Facebook",
+                        "url": "http://www.spiegel.de",
+                        "count-orientation": "horizontal"
+                    }, {
+                        "type": "Twitter",
+                        "url": "http://www.spiegel.de",
+                        "count-orientation": "horizontal"
+                    }, {
+                        "type": "Google",
+                        "url": "http://www.spiegel.de",
+                        "count-orientation": "horizontal"
+                    }
+                ]
+            },
+            "pluginFacebook": {
+                "switch": {
+                    "name": "facebook"
+                },
+                "services": [
+                    {
+                        "type": "Facebook",
+                        "url": "http://www.spiegel.de",
+                        "count-orientation": "vertical"
+                    }
+                ]
+            },
+            "pluginTwitter": {
+                "switch": {
+                    "name": "twitter"
+                },
+                "services": [
+                    {
+                        "type": "Twitter",
+                        "url": "http://www.spiegel.de",
+                        "count-orientation": "vertical"
+                    }
+                ]
+            },
+            "pluginGoogle": {
+                "switch": {
+                    "name": "google"
+                },
+                "services": [
+                    {
+                        "type": "Google",
+                        "url": "http://www.spiegel.de",
+                        "count-orientation": "vertical"
+                    }
+                ]
+            }
+        },
+        "script": {
+            "require": {
+                "config": {
+
+                }
+            }
+        }
+    }
+}

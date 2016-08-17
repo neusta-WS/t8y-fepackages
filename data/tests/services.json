@@ -1,0 +1,38 @@
+{
+    "page": {
+        "basePath": "../../",
+        "title": "t8y.com utils test page",
+        "head": {
+            "description": "Ich bin eine Page Description",
+            "keywords": "Wir, sind, Keywords",
+            "socialmedia": {
+                "title": "Ich bin ein SocialMedia Title",
+                "description": "Ich bin eine SocialMedia Description",
+                "image": {
+                    "src": "YOURWEBSITE.com/YOURIMAGE.png",
+                    "width": 200,
+                    "height": 200
+                }
+            },
+            "link": {
+                "style": "tests/services.css"
+            }
+        },
+        "body": {
+            "upload": {
+                "title": "UPLOAD ME",
+                "url": "../php/upload.php"
+            }
+        },
+        "script": {
+            "require": {
+                "config": {
+                    "t8y/services/Upload": {
+                        "flash": "../../_resources/bower/plupload/js/Moxie.swf",
+                        "silverlight": "../../_resources/bower/plupload/js/Moxie.xap"
+                    }
+                }
+            }
+        }
+    }
+}

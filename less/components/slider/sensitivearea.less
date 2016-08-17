@@ -1,0 +1,21 @@
+.slider-sensitivearea_base-layout() {
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  display: inline-block;
+  margin: auto 0px;
+//  visibility: hidden;
+  height: 100%;
+
+  &.active {
+    visibility: visible;
+  }
+
+  &.prev {
+    left: 0px;
+  }
+
+  &.next {
+    right: 0px;
+  }
+}

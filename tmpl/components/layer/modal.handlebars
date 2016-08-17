@@ -1,0 +1,8 @@
+<div class="controller component{{#if class}} {{class}}{{/if}}" data-component="{{or ref "layer/modal"}}" data-controller="t8y/layer/Modal"{{#if deep}} data-deep="{{deep}}"{{/if}}{{#if ajax}} data-ajax="{{ajax}}"{{/if}}>
+    <section data-element="content-container">
+        <a href="" class="close" data-element="close"></a>
+        <div class="content">
+            {{{content}}}
+        </div>
+    </section>
+</div>

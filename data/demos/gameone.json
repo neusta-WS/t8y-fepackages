@@ -1,0 +1,35 @@
+{
+    "page": {
+        "basePath": "../../",
+        "title": "t8y.com demo page",
+        "head": {
+            "description": "Ich bin eine Page Description",
+            "keywords": "Wir, sind, Keywords",
+            "socialmedia": {
+                "title": "Ich bin ein SocialMedia Title",
+                "description": "Ich bin eine SocialMedia Description",
+                "image": {
+                    "src": "YOURWEBSITE.com/YOURIMAGE.png",
+                    "width": 200,
+                    "height": 200
+                }
+            },
+            "link": {
+                "style": "demos/gameone.css"
+            }
+        },
+        "script": {
+            "require": {
+                "config": {
+                    "t8y/utils/speed": {
+                        "testFile": "../assets/img/speedtest.jpg"
+                    },
+                    "t8y/services/proxy": {
+                        "service": "../php/proxy.php"
+                    }
+                }
+            }
+        }
+
+    }
+}

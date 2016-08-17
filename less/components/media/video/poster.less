@@ -1,0 +1,44 @@
+.video_poster_base-layout() {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  line-height: 0;
+
+  picture {
+    visibility: hidden;
+    .loaded & {
+      visibility: visible;
+    }
+  }
+
+  a.component[data-component="t8y/media/video/button"] {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+
+    &.icon-play, &.icon-pause {
+      font-size: 50px;
+      img {
+        visibility: hidden;
+      }
+    }
+
+    &.icon-pause {
+      opacity: 0;
+      visibility: hidden;
+      .transition-property(opacity visibility);
+      .transition-duration(0.35s);
+
+      .hover_mouse & {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+    "page": {
+        "basePath": "../../",
+        "title": "t8y.com utils test page",
+        "head": {
+            "description": "Ich bin eine Page Description",
+            "keywords": "Wir, sind, Keywords",
+            "socialmedia": {
+                "title": "Ich bin ein SocialMedia Title",
+                "description": "Ich bin eine SocialMedia Description",
+                "image": {
+                    "src": "YOURWEBSITE.com/YOURIMAGE.png",
+                    "width": 200,
+                    "height": 200
+                }
+            },
+            "link": {
+                "style": "tests/parallax.css"
+            }
+        },
+        "body": {
+            "picture": [
+                {
+                    "type": "lg",
+                    "src": "http://simpleicon.com/wp-content/uploads/screen-1.png"
+                }, {
+                    "type": "md",
+                    "alignment": "left",
+                    "src": "http://simpleicon.com/wp-content/uploads/ipad-landscape.png"
+                }, {
+                    "type": "sm",
+                    "alignment": "right",
+                    "scale": "true",
+                    "src": "http://simpleicon.com/wp-content/uploads/ipad-portrait.png"
+                }, {
+                    "type": "xs",
+                    "alignment": "left",
+                    "src": "http://simpleicon.com/wp-content/uploads/iphone-landscape.png"
+                }, {
+                    "type": "default",
+                    "alignment": "right",
+                    "src": "http://simpleicon.com/wp-content/uploads/iphone-portrait.png"
+                }
+            ],
+            "picture1": [
+                {
+                    "type": "lg",
+                    "src": "https://www.apple.com/euro/imac/a/generic/performance/images/hero_image.png"
+                }, {
+                    "type": "md",
+                    "alignment": "left",
+                    "src": "http://www.smarthomegroup.com.au/wp-content/uploads/2014/03/ipad_landscape.png"
+                }, {
+                    "type": "sm",
+                    "alignment": "right",
+                    "scale": "true",
+                    "src": "http://logmytraining.info.s3-website-us-east-1.amazonaws.com/img/screenshots/iPad/ipad_620_portrait.png"
+                }, {
+                    "type": "xs",
+                    "alignment": "left",
+                    "src": "http://simpleicon.com/wp-content/uploads/iphone-landscape.png"
+                }, {
+                    "type": "default",
+                    "alignment": "right",
+                    "src": "http://simpleicon.com/wp-content/uploads/iphone-portrait.png"
+                }
+            ],
+            "picture2": [
+                {
+                    "type": "lg",
+                    "src": "http://simpleicon.com/wp-content/uploads/screen-1.png"
+                }, {
+                    "type": "md",
+                    "alignment": "left",
+                    "src": "http://simpleicon.com/wp-content/uploads/ipad-landscape.png"
+                }, {
+                    "type": "sm",
+                    "alignment": "right",
+                    "scale": "true",
+                    "src": "http://simpleicon.com/wp-content/uploads/ipad-portrait.png"
+                }, {
+                    "type": "xs",
+                    "alignment": "left",
+                    "src": "http://simpleicon.com/wp-content/uploads/iphone-landscape.png"
+                }, {
+                    "type": "default",
+                    "alignment": "right",
+                    "src": "http://simpleicon.com/wp-content/uploads/iphone-portrait.png"
+                }
+            ],
+            "picture3": [
+                {
+                    "type": "lg",
+                    "src": "https://www.apple.com/euro/imac/a/generic/performance/images/hero_image.png"
+                }, {
+                    "type": "md",
+                    "alignment": "left",
+                    "src": "http://www.smarthomegroup.com.au/wp-content/uploads/2014/03/ipad_landscape.png"
+                }, {
+                    "type": "sm",
+                    "alignment": "right",
+                    "scale": "true",
+                    "src": "http://logmytraining.info.s3-website-us-east-1.amazonaws.com/img/screenshots/iPad/ipad_620_portrait.png"
+                }, {
+                    "type": "xs",
+                    "alignment": "left",
+                    "src": "http://simpleicon.com/wp-content/uploads/iphone-landscape.png"
+                }, {
+                    "type": "default",
+                    "alignment": "right",
+                    "src": "http://simpleicon.com/wp-content/uploads/iphone-portrait.png"
+                }
+            ]
+        },
+        "script": {
+            "require": {
+                "config": {
+
+                }
+            }
+        }
+    }
+}

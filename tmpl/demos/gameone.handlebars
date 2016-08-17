@@ -1,0 +1,42 @@
+{{#common "page"}}
+    <div class="row">
+        <img class="col-xs-offset-1 col-xs-2" src="http://assets.gameone.de/static/element_bg/logo-game-one-e3a40c85c408e273b872b9536f50f948.png"/>
+    </div>
+    <div class="row">
+        <article id="gameone-tv-slider" class="component controller slider col-sm-offset-3 col-sm-6 col-xs-offset-1 col-xs-10" data-component="slider" data-view-alignment="horizontal" data-controller="t8y/media/gameone/TVSlider" data-force-mouse-swipe="true">
+            <div class="wrapper">
+
+            </div>
+
+            <h1><span class="icon-tv"></span></h1>
+
+            {{#component "slider/button" class='prev icon-chevron-left' target='gameone-tv-slider' direction="-1"}}
+                {{{component "loader/cubes_3x3"}}}
+            {{/component}}
+            {{#component "slider/button" class='next icon-chevron-right' target='gameone-tv-slider' direction="+1"}}
+                {{{component "loader/cubes_3x3"}}}
+            {{/component}}
+
+        </article>
+    </div>
+    <div class="row">
+        <article id="gameone-blog-slider" class="component controller slider col-sm-offset-3 col-sm-6 col-xs-offset-1 col-xs-10" data-component="slider" data-view-alignment="horizontal" data-controller="t8y/media/gameone/BlogSlider" data-force-mouse-swipe="true">
+            <div class="wrapper">
+
+            </div>
+
+            <h1><span class="icon-bubbles"></span></h1>
+
+            {{#component "slider/button" class='prev icon-chevron-left' target='gameone-blog-slider' direction="-1"}}
+                {{{component "loader/cubes_3x3"}}}
+            {{/component}}
+            {{#component "slider/button" class='next icon-chevron-right' target='gameone-blog-slider' direction="+1"}}
+                {{{component "loader/cubes_3x3"}}}
+            {{/component}}
+
+        </article>
+    </div>
+
+    {{> "components/layer/modal" deep="modal"}}
+    <!--<video controls src="http://cdn.riptide-mtvn.com/r2/production/2013/09/12/bbde62c2bd115163edf75bd2fd9b2723/mp4_webxl_1280x720_seg0_1280x720_3367000.mp4"></video>-->
+{{/common}}

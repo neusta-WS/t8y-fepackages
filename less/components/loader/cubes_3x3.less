@@ -1,0 +1,57 @@
+.loader_cubes_3x3-base-layout(@color: blue, @duration: .88s, @delay: .065s){
+  position: relative;
+  min-width: 18px;
+  top: 50%;
+  margin: auto;
+
+  &:before {
+    content: '';
+    padding-bottom: 100%;
+  }
+  .clearfix();
+
+  .wrapper {
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+
+    .loader-block {
+      display: inline-block;
+      float: left;
+      width: percentage(1/3);
+      height: percentage(1/3);
+      background-color: @color;
+      padding: 3%;
+      .background-clip(content-box);
+
+      .animation(show @duration step-end infinite alternate, pulse @duration linear infinite alternate);
+
+      &:nth-child(1) { .animation-delay((1 * @delay)); }
+      &:nth-child(2) { .animation-delay((2 * @delay)); }
+      &:nth-child(3) { .animation-delay(3 * @delay); }
+      &:nth-child(4) { .animation-delay(5 * @delay); }
+      &:nth-child(5) { .animation-delay(2 * @delay); }
+      &:nth-child(6) { .animation-delay(7 * @delay); }
+      &:nth-child(7) { .animation-delay(6 * @delay); }
+      &:nth-child(8) { .animation-delay(4 * @delay); }
+    }
+  }
+
+  @keyframes pulse {
+    from,
+    40% {
+      background: @color;
+    }
+    to {
+      background: @color;
+    }
+  }
+
+  @keyframes show {
+    from, 40% { opacity: 0; }
+    41%, to { opacity: 1; }
+  }
+
+}
+

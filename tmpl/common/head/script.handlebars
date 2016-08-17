@@ -1,0 +1,12 @@
+<script type="text/javascript">
+    var require = {
+        config: {{#if page.script.require.config}}{{{json page.script.require.config}}}{{else}}{}{{/if}}
+    };
+
+    require.config.baseUrl = "{{page.basePath}}js";
+</script>
+{{#if dev}}
+    <script data-main="{{page.basePath}}js/config" src="{{page.basePath}}_resources/bower/requirejs/require.js" type="text/javascript"></script>
+{{else}}
+    <script src="{{page.basePath}}_release/js/main.js" type="text/javascript"></script>
+{{/if}}

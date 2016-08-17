@@ -1,0 +1,141 @@
+@import '../style.less';
+@import '../components/slider.less';
+
+.controller[data-controller="t8y/slider/Native"][data-view-alignment="horizontal"] {
+  .slider_native-layout();
+  margin-top: 20px;
+
+  > a.controller[data-controller="t8y/slider/controls/SensitiveArea"] {
+    .slider-sensitivearea_base-layout();
+    width: 50px;
+  }
+
+  > .wrapper {
+    .component[data-component="slider/view"] {
+      width: 70%;
+      height: 300px;
+    }
+
+    .nth-child(figure, 0, 2, 3, blue-white);
+    .nth-child(figure, 1, 2, 3, white-blue);
+    .nth-child(figure, 2, 2, 3, grey-white);
+  }
+}
+
+.controller[data-controller="t8y/slider/Native"][data-view-alignment="vertical"] {
+  .slider_native-layout();
+  height: 300px;
+  margin-top: 20px;
+
+  > a.controller[data-controller="t8y/slider/controls/SensitiveArea"] {
+    .slider-sensitivearea_base-layout();
+    width: 50px;
+  }
+
+
+  > .wrapper {
+    .component[data-component="slider/view"] {
+      width: 100%;
+      height: 500px;
+    }
+
+    .nth-child(figure, 0, 2, 3, blue-white);
+    .nth-child(figure, 1, 2, 3, white-blue);
+    .nth-child(figure, 2, 2, 3, grey-white);
+  }
+}
+
+
+.controller[data-controller="t8y/slider/Flip"] {
+  .slider_base-layout();
+  .t8y-logo();
+  margin-top: 20px;
+
+  &[data-view-alignment="vertical"] {
+    height: 234px;
+  }
+
+  > a.controller[data-controller="t8y/slider/controls/Button"] {
+    .slider-button_base-layout();
+    width: 30px;
+    height: 70px;
+    background: red;
+  }
+
+  > ul.controller[data-controller="t8y/slider/controls/Pagination"] {
+    .slider-pagination_base-layout();
+    > li {
+      width: 30px;
+      height: 30px;
+      margin-left: 5px;
+      border-radius: 50%;
+      border: 3px solid @t8y-grey;
+      background: @t8y-white;
+
+      &:first-child {
+        margin-left: 0px;
+      }
+
+      &.active {
+        background: @t8y-blue;
+      }
+    }
+  }
+
+  figure {
+    padding-bottom: 30%;
+  }
+
+  &.demo-1 figure {
+    width: 25%;
+  }
+
+  &.demo-2 {
+    margin-bottom: 0px;
+  }
+
+  &.demo-2-sub {
+    margin-top: 0px;
+
+    figure {
+      width: 25%;
+      padding-bottom: 15%;
+
+      > a[data-controller="t8y/slider/controls/Button"] {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+      }
+    }
+  }
+
+  .nth-child(figure, 0, 2, 3, blue-white);
+  .nth-child(figure, 1, 2, 3, white-blue);
+  .nth-child(figure, 2, 2, 3, grey-white);
+}
+
+.nth-child-rule(blue-white) {
+  .t8y-blueprint-texture(@t8y-blue, @t8y-white);
+}
+.nth-child-rule(white-blue) {
+  .t8y-blueprint-texture(@t8y-white, @t8y-blue);
+}
+.nth-child-rule(grey-white) {
+  .t8y-blueprint-texture(@t8y-grey, @t8y-white);
+}
+
+// Allgemeine Formel für blueprint texture
+//
+//.nth-child-rule(@color-pattern;) {
+//  @bgcolor: ~`(function(value){return value=value.match(/(\w+)/g)[0]||"0"})((function(){var args="@{arguments}";return args=args.replace(/^\[|\]$/g,"")})())`;
+//  @color: ~`(function(value){return value=value.match(/(\w+)/g)[1]||"0"})((function(){var args="@{arguments}";return args=args.replace(/^\[|\]$/g,"")})())`;
+//
+//  @bgc: ~"t8y-@{bgcolor}";
+//  @c: ~"t8y-@{color}";
+//
+//  .t8y-blueprint-texture(@@bgc, @@c);
+//}
+
+

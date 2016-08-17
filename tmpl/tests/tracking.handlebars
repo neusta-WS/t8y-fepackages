@@ -1,0 +1,25 @@
+{{#common "page"}}
+    <script type="text/javascript">
+        var require = {
+            config: {
+                'tracking/omniture': {
+                    script: '{{basePath}}../ext_sources/s_code_HQ.js',
+                    reportsuite: '{{basePath}}../_release/ext_sources/report_suites.json',
+                    enable: true,
+                    live: true,
+
+                    country: 'es',
+                    language: 'es',
+
+                    campaign: 'WS-T8Y-Test',
+                    tenantID: 'D=v1',
+                    trackValuePrefix: 'WS : T8Y : Test'
+                },
+
+                'tracking/omniture/PageLoad': {
+                    channel: 'Testspecial'
+                }
+            }
+        };
+    </script>
+{{/common}}

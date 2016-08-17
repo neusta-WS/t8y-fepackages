@@ -1,0 +1,12 @@
+<picture class="component" data-component="picture" data-element="parallax">
+    <!--[if IE 9]><video><![endif]-->
+    {{#each this}}
+        <source class="{{type}}"
+            {{#if src}}src="{{src}}"{{/if}}
+            {{#if srcset}}srcset="{{srcset}}"{{/if}}
+            {{#if alignment}}data-alignment="{{alignment}}"{{/if}}
+            {{#if scale}}data-scale="{{scale}}"{{/if}}
+        />
+    {{/each}}
+    <!--[if IE 9]></video><![endif]-->
+</picture>

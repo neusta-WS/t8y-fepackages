@@ -1,0 +1,95 @@
+.layer-modal_base-layout() {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+
+    width: 100%;
+    z-index: 9999;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    margin: auto;
+
+    .transition(opacity 0.35s ease 0s);
+
+    > [data-element="content-container"] {
+        position: relative;
+        //need a higher z-index for s4
+        z-index: 10000;
+        text-align: left;
+        display: inline-block;
+        vertical-align: middle;
+        background-color: lightgray;
+        background-clip: padding-box;
+        margin: 4% 0;
+        border: 15px solid transparent;
+        padding: 20px;
+
+        > .close {
+            &:before {
+                content: "X";
+                font-family: Helvetica,Arial,sans-serif;
+                font-size: 21px;
+                color: #4a4a4a;
+                z-index: 999;
+            }
+            .box-sizing(content-box);
+
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            width: 1em;
+            height: 1em;
+            padding: 15px;
+            font-size: 15px;
+            text-align: center;
+            cursor: pointer;
+            color: darkgray;
+            z-index: 10;
+            display: block;
+        }
+    }
+
+    //hide nested modals
+    .component[data-component="modal"] {
+        display: none;
+    }
+}
+
+body.active-modal {
+    overflow: hidden;
+
+    .component[data-component="modal"].active {
+        visibility: visible;
+        opacity: 1;
+        bottom: 0;
+        height: auto;
+
+        .component[data-component="modal"] {
+            display: none;
+        }
+    }
+}
+
+
+//START  Sharing Layer, RGRELAUNCH-530
+.component.integration-sharing-funktion[data-component="modal"] {
+
+    overflow: hidden;
+
+    section[data-element="content-container"] {
+        margin-top: 0;
+        height: 100%;
+
+        @media (min-width: @screen-xs) {
+            margin-top: 90px;
+            height: auto;
+        }
+    }
+}
+// END

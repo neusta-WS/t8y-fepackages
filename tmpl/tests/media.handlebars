@@ -1,0 +1,12 @@
+{{#common "page"}}
+
+    {{#with page.video}}
+        {{{partial 't8y/components/media/video' id="demo-1" loop=true}}}
+    {{/with}}
+    {{#with page.video}}
+        {{{partial 't8y/components/media/video' id="demo-2" loop=false}}}
+    {{/with}}
+
+    <div class="controller" data-controller="media/YouTubeVideo"></div>
+
+{{/common}}

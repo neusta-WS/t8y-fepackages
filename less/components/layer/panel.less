@@ -1,0 +1,27 @@
+.layer-panel_base-layout() {
+  position: fixed;
+  height: 100%;
+  width: 300px;
+
+  top: 0px;
+  left: 0px;
+  z-index: 2147483647;
+
+
+  &.right-side {
+    left: auto;
+    right: 0px;
+  }
+
+  .close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+
+  .content {
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+  }
+}

@@ -1,0 +1,239 @@
+/*
+ * MASTER STYLE FILE
+ */
+
+@import '../style.less';
+@import '../components/slider.less';
+@import '../components/layer/modal.less';
+@import '../components/loader/cubes_3x3.less';
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font: Arial,sans-serif;
+  background-color: #2e2e2e;
+  background-image: url(http://assets.gameone.de/static/bg/bg-2-9e41da447a4fbfab8e1f9af8a5d87136.jpg);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-attachment: fixed;
+  background-position: center 0px;
+  //  display: table;
+}
+
+h1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: #fff;
+  margin-top: 5%;
+  margin-left: 7%;
+  font-size: 52px;
+  text-shadow: 2px -2px 0 #000;
+  opacity: 0.65;
+
+  @media(max-width:@screen-sm-max) {
+    font-size: 30px;
+  }
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+
+article {
+  .slider_base-layout();
+  //  display: table-cell;
+  vertical-align: middle;
+
+
+  figure {
+    position: relative;
+
+    > a {
+      display: inline-block;
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+
+      h2 {
+        position: absolute;
+        bottom: 0;
+        color: white;
+        margin: 0;
+        padding: 3% 7%;
+        background: rgba(0,0,0,0.5);
+        display: block;
+        width: 100%;
+        font-size: 24px;
+      }
+    }
+  }
+
+  > a.controller[data-component="slider/button"] {
+    .slider-button_base-layout();
+    width: 30px;
+    height: 70px;
+    background-color: rgba(0,0,0,0.6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    opacity: 0.5;
+    .transition-property(opacity);
+    .transition-duration(0.35s);
+
+    &:before {
+      display: block;
+      vertical-align: middle;
+      text-align: center;
+      line-height: 70px;
+      font-size: 32px;
+      color: #ac9c64;
+    }
+
+    &.loading:before {
+      display: none;
+    }
+
+    &.prev {
+      visibility: hidden;
+      &.active {
+        visibility: visible;
+      }
+    }
+
+
+    .loader {
+      display: none;
+      width: 80%;
+      .loader_cubes_3x3-base-layout(#ac9c64);
+    }
+
+    &.loading {
+      .loader {
+        display: block;
+      }
+    }
+  }
+
+  &.hover_mouse {
+    > a.controller[data-component="slider/button"] {
+      opacity: 1;
+    }
+  }
+
+  .menu {
+    display: none;
+  }
+}
+
+  .layer-modal_base-layout();
+.component[data-component="layer/modal"] {
+  background-color: rgba(0,0,0,0.6);
+
+  > [data-element="content-container"] {
+    width: 80%;
+    height: 90%;
+    background-color: rgba(0,0,0,0.4);
+    border-bottom: 3px solid #ac9c64;
+
+    > [data-element="close"]{
+      font-size: 48px;
+      line-height: 48px;
+      &:before {
+        content: '\e609';
+        font-family: icomoon;
+        font-size: 48px;
+        color: white;
+      }
+    }
+  }
+
+  .content {
+    height: 100%;
+  }
+
+  .menu {
+    position: relative;
+    height: 100%;
+
+    > * {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    ul {
+      text-align: center;
+      -webkit-padding-start: 0px;
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      margin: auto;
+      width: 100%;
+      height: 20%;
+
+      > li {
+        display: inline-block;
+        list-style-type: none;
+        width: percentage(1/3);
+
+        > a {
+          font-size: 72px;
+          color: white;
+          padding: 20px;
+          border-width: 6px;
+          border-style: solid;
+          border-color: white;
+          border-radius: 50%;
+          margin: 0 15px;
+          text-decoration: none;
+
+          .transition-property(color border-color);
+          .transition-duration(0.5s);
+
+          &:hover {
+            color: #ac9c64;
+            border-color: #ac9c64;
+          }
+        }
+      }
+    }
+
+    label.error {
+      color: #ac9c64;
+      font-size: 32px;
+      word-wrap: break-word;
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      margin: auto;
+      height: 50%;
+      width: 60%;
+
+      &:before {
+        font-size: 72px;
+        position: absolute;
+        margin-left: -72px;
+      }
+    }
+
+    video {
+      width: 100%;
+    }
+  }
+}
+
+

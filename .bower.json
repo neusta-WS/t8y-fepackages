@@ -1,0 +1,59 @@
+{
+  "name": "t8y",
+  "description": "bower configuration",
+  "homepage": "https://github.com/t8ycom/t8y-frontend-boilerplate",
+  "authors": [
+    "Stephan Gerbeth <Stephan.Gerbeth@t8y.com>"
+  ],
+  "main": "js/",
+  "keywords": [
+    "t8y",
+    "bower",
+    "configuration",
+    "boilerplate"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "_resources/bower"
+  ],
+  "dependencies": {
+    "jquery": "~1",
+    "backbone": "~1.1.0",
+    "underscore": "~1",
+    "requirejs": "~2.1.9",
+    "require-css": "~0.1.0",
+    "requirejs-text": "~2.0.10",
+    "lesshat": "~2.0.13",
+    "console-polyfill": "~0.1.0",
+    "CSS3MultiColumn": "https://github.com/BetleyWhitehorne/CSS3MultiColumn.git",
+    "html5shiv": "~3.7.0",
+    "respond": "~1.4.1",
+    "bootstrap": "~3.0.3",
+    "history": "~1.8.0",
+    "jquery-cookie": "~1",
+    "mediaelement": "~2.15",
+    "jquery-whenlive": "~2.0.5",
+    "normalize-css": "~2.1.3",
+    "modernizr": "~2.7.1",
+    "greensock": "~1.11.5",
+    "jquery-pointerevents": "~0.5.2",
+    "es5-shim": "~3.4.0",
+    "socket.io-client": "~1.0.6",
+    "requirejs-plugins": "~1.0.2",
+    "plupload": "~2.1.2",
+    "ellocate": "~0.1.0"
+  },
+  "_release": "cb1ee43aee",
+  "_resolution": {
+    "type": "branch",
+    "branch": "v2.0",
+    "commit": "cb1ee43aee1d42d116779b0f7f88dd70892f28a8"
+  },
+  "_source": "https://github.com/t8ycom/t8y-fepackages.git",
+  "_target": "v2.0",
+  "_originalSource": "https://github.com/t8ycom/t8y-fepackages.git"
+}

@@ -1,0 +1,23 @@
+.nth-child-rule() {
+
+}
+
+.nth-counter(@selector, @wow, @pref, @rule) when (@wow > 0){
+  @prefix: ~"figure";
+  & + @{prefix} {
+    .nth-counter(@selector, @wow - 1, @prefix, @rule);
+  }
+}
+
+.nth-counter(@selector, @wow, @pref, @rule) when (@wow <= 0){
+  .nth-child-rule(@rule);
+}
+
+.nth-child(@selector, @offset, @iteration, @max-iteration, @rule) when (@iteration >= 0) {
+  @index: @iteration * @max-iteration + @offset;
+  @while: @index;
+  @{selector}:first-child {
+    .nth-counter(@selector, @while, '', @rule);
+  }
+  .nth-child(@selector, @offset, @iteration - 1, @max-iteration, @rule);
+}

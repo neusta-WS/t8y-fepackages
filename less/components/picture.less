@@ -1,0 +1,116 @@
+@screenSizes: lg, md, sm, xs, default;
+@screen-default-max: (@screen-xs-min - 1);
+
+.picture_base-layout() {
+  body {
+    z-index: 4;
+    &:after {
+      display: none;
+      content: 'default';
+    }
+  }
+
+  picture[data-component="picture"] {
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+
+    > source {
+      position: relative;
+      width: 300%;
+      height: 100%;
+      margin-left: -100%;
+      display: none;
+
+
+      //    &:before {
+      //      content: "";
+      //      display: inline-block;
+      //      height: 100%;
+      //      vertical-align: middle;
+      //    }
+
+      > img {
+        display: block;
+        margin: auto;
+        opacity: 0;
+
+        .transition-duration(0.35s);
+        .transition-property(opacity);
+
+        &.ready {
+          opacity: 1;
+        }
+      }
+
+      &[data-alignment="left"], &[data-alignment="right"], &[data-scale="true"] {
+        width: 100%;
+        margin-left: auto;
+      }
+
+      &[data-alignment="left"] > img {
+        float: left;
+      }
+      &[data-alignment="right"] > img {
+        float: right;
+      }
+
+      &[data-scale="true"] > img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    > *:last-child {
+      display: block;
+    }
+
+    > .last-child {
+      display: block;
+    }
+  }
+
+  .createResponsiveBrakepointRules();
+}
+
+.createResponsiveBrakepointRules() {
+  .loop(@i) when (@i > 0) {
+    @name: e(extract(@screenSizes, @i));
+    .createBreakpoint(@name, @i);
+    .loop(@i - 1);
+  }
+  .loop(length(@screenSizes));
+}
+
+.createBreakpoint (@name, @index) when not(@name = default) {
+  @minWidth: 'screen-@{name}-min';
+  @media (min-width: @@minWidth) {
+    .createRule(@name, @index);
+  }
+}
+
+.createBreakpoint (@name, @index) when(@name = default) {
+  @media (max-width: @screen-default-max) {
+    .createRule(@name, @index);
+  }
+}
+
+.createRule(@name, @index) {
+  picture[data-component="picture"] {
+    > .@{name} {
+      display: block;
+    }
+
+    > .@{name} + * {
+      display: none;
+    }
+  }
+
+  body:after {
+    content: '@{name}';
+  }
+
+  body {
+    z-index: (@index - 1);
+  }
+}

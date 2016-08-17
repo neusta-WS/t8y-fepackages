@@ -1,0 +1,40 @@
+.range-slider_base-layout(@handleRadius: 50px, @touchPadding: 25px) {
+  position: relative;
+  width: 100%;
+  background: yellow;
+  padding: @touchPadding 0;
+  padding-right: @handleRadius;
+
+  .centered-line {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: 100%;
+    margin: auto;
+    padding: 0 (@handleRadius / 2);
+    pointer-events: none;
+
+    .line {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: green;
+    }
+  }
+
+  .handle {
+    position: relative;
+    display: block;
+    top: 0px;
+    width: @handleRadius;
+    height: @handleRadius;
+    pointer-events: none;
+
+    background-color: red;
+    .border-radius(50%);
+  }
+}

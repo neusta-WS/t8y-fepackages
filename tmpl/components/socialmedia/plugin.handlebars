@@ -1,0 +1,7 @@
+{{#if switch}}
+    {{> "components/socialmedia/switch" switch}}
+{{/if}}
+
+{{#each services}}
+    <div data-component="socialmedia/plugin" data-controller="t8y/socialmedia/plugin/{{type}}" class="component controller" data-url="{{url}}" data-count-orientation="{{count-orientation}}" data-target=".switch-{{../switch.name}}"></div>
+{{/each}}

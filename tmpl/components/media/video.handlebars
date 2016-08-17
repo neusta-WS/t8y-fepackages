@@ -1,0 +1,38 @@
+<div class="component controller{{#if class}} {{class}}{{/if}}" data-component="t8y/media/video"{{#if auto-resize}} data-auto-resize="true"{{/if}} data-controller="media/Video" id="{{id}}">
+    <div class="video">
+        <video class="normal" {{#with loop}}loop="{{this}}"{{/with}}>
+            {{#each sources}}
+                <source src="{{url}}" type="video/{{type}}" media="all
+                    {{#if max-width}}
+                            and (max-device-width:{{max-width}}px)
+                        {{#if retina}}
+                            and (-webkit-min-device-pixel-ratio: 1.5)
+                        {{else}}
+                            and (-webkit-max-device-pixel-ratio: 1.5)
+                        {{/if}}
+                    {{/if}}
+                "/>
+            {{/each}}
+        </video>
+
+    </div>
+    {{#with this.poster}}
+        {{{partial 't8y/components/media/video/poster' poster=this id=../id}}}
+    {{/with}}
+
+    {{#each controls}}
+        {{{partial type id=../id}}}
+    {{/each}}
+</div>
+
+
+
+{{#partial 't8y/components/media/video/showat' id=id timecode-start="2.0" timecode-stop="5.0"}}
+    <h1>Test Headline</h1>
+    <p>Test Content</p>
+{{/partial}}
+
+{{#partial 't8y/components/media/video/showat' id=id video-ended=true}}
+    <h1>Test Headline on Video End</h1>
+    <p>Test Content on Video End</p>
+{{/partial}}
