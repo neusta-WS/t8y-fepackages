@@ -114,6 +114,7 @@ define(['jquery', 'underscore', 'backbone', '../types/PointerController', '../ty
 
         var modal = $("div.controller.modal.active");
         $('section[data-element="content-container"] .content > *', modal).detach();
+        $(document).trigger( "t8y.modal.open", [ this.el ] );
 
         History.update($(e.currentTarget).data('deep'), $(e.currentTarget).attr('href'));
 
@@ -134,6 +135,7 @@ define(['jquery', 'underscore', 'backbone', '../types/PointerController', '../ty
 
     function close(e) {
         e.preventDefault();
+        $(document).trigger( "t8y.modal.close", [ this.el ] );
         History.remove(this.$el.data('deep'));
     }
 
